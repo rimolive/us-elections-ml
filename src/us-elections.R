@@ -3,6 +3,8 @@ library(sparklyr)
 
 DF_LOCATION <- "https://raw.githubusercontent.com/rimolive/us-elections/master/data/us-elections.csv"
 
+sc <- spark_connect(master = paste("spark://", Sys.getenv("OSHINKO_CLUSTER_NAME"), ":7077"))
+
 us.elections_tbl <- copy_to(sc, read.csv(DF_LOCATION))
 
 elections_tbl <- us.elections_tbl %>%
