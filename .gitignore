@@ -1,0 +1,7 @@
+.RData
+.Rhistory
+.Rproj.user/
+logs/
+spark-warehouse/
+us-elections-ml.Rproj
+
